@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Source_and_Nomber_of_Emplyees</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISCHANGED(OwnerId),
+OR(ISBLANK(Country),  ISBLANK(TEXT(LeadSource)), ISBLANK(NumberOfEmployees)))</errorConditionFormula>
+    <errorMessage>Can&apos;t change Owner if Country, Source and number of emplyees is not filled in and you are not the Contract manager or the Adminstrator. Contract managers still need to fill in Source and Country, Administrators still need to fill in the Lead Source.</errorMessage>
+</ValidationRule>
